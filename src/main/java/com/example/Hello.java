@@ -12,7 +12,7 @@ import dev.langchain4j.model.ollama.OllamaChatModel;
  * Hello world!
  * with various LLMs
  */
-public class App 
+public class Hello 
 {
     public static void main( String[] args )
     {

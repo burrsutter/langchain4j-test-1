@@ -64,7 +64,7 @@
             <configuration>
               <archive>
                 <manifest>
-                  <mainClass>com.example.App</mainClass> <!-- Replace with your actual main class -->
+                  <mainClass>com.example.Burr</mainClass> <!-- Replace with your actual main class -->
                 </manifest>
               </archive>
               <descriptorRefs>

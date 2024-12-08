@@ -1,8 +1,12 @@
+# Same Prompt, Many Models
+
 Simple example to illustrate the variability across invocations, model vendors, model versions, model parameter counts and model quantization levels.  
 
 This example uses OpenAI and Ollama model servers.  
 
 OpenAI uses an api key
+
+## Usage
 
 ```
 export OPENAI_API_KEY=sk-proj-1xMQkJtFDA8BMp2-blah-blah
@@ -43,7 +47,9 @@ mvn clean package
 java -jar target/langchain4j-test-1-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-## Example output
+## Example Output
+
+### Say 'Hello World'
 
 ```
 OpenAI gpt-4o-mini
@@ -177,4 +183,44 @@ answer: Hello! I'm Qwen, an AI developed by Alibaba Cloud. I'm ready to assist y
 Ollama qwen2.5:7b-instruct-q4_K_M
 prompt: Say 'Hello World'
 answer: Hello World! How can I assist you today?
+```
+
+### "Who is Burr Sutter in 10 words or less?"
+
+```
+OpenAI gpt-4o-mini
+prompt: Who is Burr Sutter in 10 words or less?
+answer: Burr Sutter is a software engineer and Kubernetes expert.
+
+OpenAI gpt-3.5-turbo
+prompt: Who is Burr Sutter in 10 words or less?
+answer: Director of Developer Experience at Red Hat.
+
+Ollama llama3.2:3b-instruct-q4_K_M
+prompt: Who is Burr Sutter in 10 words or less?
+answer: I couldn't find any notable information on a person named Burr Sutter.
+
+Ollama llama3.2:1b-instruct-q4_K_M
+prompt: Who is Burr Sutter in 10 words or less?
+answer: Burr Sutter is a character from the TV series Yellowstone.
+
+Ollama granite3-dense:8b-instruct-q4_K_M
+prompt: Who is Burr Sutter in 10 words or less?
+answer: Burr Sutter is a software engineer at Red Hat, known for his work on Java and DevOps.
+
+Ollama granite3-moe:3b-instruct-q4_K_M
+prompt: Who is Burr Sutter in 10 words or less?
+answer: A pioneering American inventor and entrepreneur.
+
+Ollama mistral:7b-instruct-q4_K_M
+prompt: Who is Burr Sutter in 10 words or less?
+answer: A minor character from "The Walking Dead"
+
+Ollama qwen2.5:0.5b-instruct-q4_K_M
+prompt: Who is Burr Sutter in 10 words or less?
+answer: Burr Sutter is an American former professional baseball player who played as a pitcher and shortstop. He was known for his speed, power, and striking ability, making him one of the most dominant players in the league during the late 1950s to early 1960s.
+
+Ollama qwen2.5:7b-instruct-q4_K_M
+prompt: Who is Burr Sutter in 10 words or less?
+answer: Burr Sutter is a character from the TV show "Elementary."
 ```
