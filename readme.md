@@ -37,6 +37,12 @@ java --version
 openjdk 22.0.1 2024-04-16
 OpenJDK Runtime Environment Temurin-22.0.1+8 (build 22.0.1+8)
 OpenJDK 64-Bit Server VM Temurin-22.0.1+8 (build 22.0.1+8, mixed mode)
+
+sdk install maven 3.8.6
+
+mvn --version
+Apache Maven 3.8.6
+
 ```
 
 ```
