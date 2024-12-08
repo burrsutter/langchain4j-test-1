@@ -35,4 +35,10 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+    public void testMainStuff()
+    {
+        assertEquals( App.stuff(), "STUFF" );
+    }
+
 }
