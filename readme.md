@@ -1,4 +1,39 @@
-Simple example to illustrate the variability across model vendors, model versions, model parameter counts, model quantization levels.  
+Simple example to illustrate the variability across invocations, model vendors, model versions, model parameter counts and model quantization levels.  
+
+This example uses OpenAI and Ollama model servers.  
+
+OpenAI uses an api key
+
+```
+export OPENAI_API_KEY=sk-proj-1xMQkJtFDA8BMp2-blah-blah
+```
+
+Ollama runs on your laptop
+
+```
+ollama serve
+```
+
+```
+ollama pull llama3.2:3b-instruct-q4_K_M
+ollama pull llama3.2:1b-instruct-q4_K_M
+ollama pull granite3-dense:8b-instruct-q4_K_M
+ollama pull granite3-moe:3b-instruct-q4_K_M
+ollama pull mistral:7b-instruct-q4_K_M
+ollama pull qwen2.5:0.5b-instruct-q4_K_M
+ollama pull qwen2.5:7b-instruct-q4_K_M
+```
+
+```
+https://sdkman.io/
+
+sdk install java 22.0.1-tem
+
+java --version
+openjdk 22.0.1 2024-04-16
+OpenJDK Runtime Environment Temurin-22.0.1+8 (build 22.0.1+8)
+OpenJDK 64-Bit Server VM Temurin-22.0.1+8 (build 22.0.1+8, mixed mode)
+```
 
 ```
 mvn clean package
@@ -7,6 +42,8 @@ mvn clean package
 ```
 java -jar target/langchain4j-test-1-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
+
+## Example output
 
 ```
 OpenAI gpt-4o-mini
